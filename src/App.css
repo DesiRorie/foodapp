@@ -1,0 +1,130 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+a {
+  color: black;
+}
+
+.navbarDiv {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+
+  padding: 10px;
+  padding-top: 0%;
+}
+.navbarDiv ul {
+  list-style: none;
+}
+.navbarList li {
+  margin-right: 10px;
+}
+.navbarList li:last-child {
+  margin-right: 0;
+}
+
+.navbarList {
+  display: flex;
+  justify-content: space-evenly;
+
+  list-style: none;
+  padding: 0;
+}
+
+.topMenu {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+
+  padding: 10px;
+  padding-top: 0%;
+}
+.menuList ul {
+  list-style: none;
+}
+.menuList li {
+  margin-right: 10px;
+}
+.menuList li:last-child {
+  margin-right: 0;
+}
+
+.menuList {
+  display: flex;
+  justify-content: space-evenly;
+
+  list-style: none;
+  padding: 0;
+}
+.homePage {
+  margin-top: 70px;
+}
+.specialsDiv {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  background-color: #212a3e;
+  padding: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.specialsDiv button {
+  font-family: sans-serif;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+}
+.query {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  justify-content: center;
+  width: 80%;
+}
+.query input {
+  /* width: 80%; */
+  border: 1px solid #dad9d9;
+  height: 2rem;
+  border-radius: 10px;
+}
+.popularFood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.popularFood a {
+  text-decoration: none;
+  color: #888;
+}
+
+.foodDiv {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-evenly;
+}
+.foodCard {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 30%;
+  border-radius: 5px;
+  align-items: start;
+}
