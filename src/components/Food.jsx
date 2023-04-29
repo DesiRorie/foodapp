@@ -14,8 +14,8 @@ const Food = () => {
         <div className="ratingDiv">
           <StarIcon style={{ color: "gold" }} /> 5.0
         </div>
-        <img src={sushi} />
         <Link to="/foodpage/california-roll" className="foodTitle">
+          <img src={sushi} />
           <h3>California Roll</h3>
         </Link>
 
@@ -27,9 +27,9 @@ const Food = () => {
         <div className="ratingDiv">
           <StarIcon style={{ color: "gold" }} /> 4.6
         </div>
-        <img src={noodles} />
-        {/* <img /> */}
         <Link to="/foodpage/udon-noodles" className="foodTitle">
+          <img src={noodles} />
+
           <h3>Udon Noodles</h3>
         </Link>
         <b>$13.00</b>
@@ -39,8 +39,8 @@ const Food = () => {
         <div className="ratingDiv">
           <StarIcon style={{ color: "gold" }} /> 5.0
         </div>
-        <img src={gyoza} />
         <Link to="/foodpage/gyoza" className="foodTitle">
+          <img src={gyoza} />
           <h3>Gyoza</h3>
         </Link>
         <b>$5.00</b>
@@ -50,8 +50,8 @@ const Food = () => {
         <div className="ratingDiv">
           <StarIcon style={{ color: "gold" }} /> 4.0
         </div>
-        <img src={koreanBbq} />
         <Link to="/foodpage/korean-bbq-wings" className="foodTitle">
+          <img src={koreanBbq} />
           <h3>Korean BBQ Wings</h3>{" "}
         </Link>
         <b>$15.00</b>

@@ -39,12 +39,16 @@ function App() {
           />
           <Route
             path="/foodpage/gyoza"
-            element={<FoodPage showImage={gyoza} title="Gyoza" />}
+            element={<FoodPage showImage={gyoza} price="$5.00" title="Gyoza" />}
           />
           <Route
             path="/foodpage/korean-bbq-wings"
             element={
-              <FoodPage showImage={koreanBbq} title="Korean BBQ Wings" />
+              <FoodPage
+                showImage={koreanBbq}
+                price="$15.00"
+                title="Korean BBQ Wings"
+              />
             }
           />
         </Route>

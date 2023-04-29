@@ -1,6 +1,8 @@
 body {
   font-family: sans-serif;
   margin: 0;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
 }
 a {
   color: black;
@@ -90,6 +92,7 @@ a {
   background-color: #212a3e;
   padding: 10px;
   width: 80%;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -188,6 +191,12 @@ a {
 .foodCard h3 {
   margin-left: auto;
   margin-right: auto;
+  transition: 0.5s;
+  text-align: center;
+}
+.foodCard img:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
 }
 .foodCard b {
   margin-left: auto;
