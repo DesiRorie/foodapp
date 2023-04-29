@@ -31,6 +31,7 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const TopMenu = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -69,9 +70,18 @@ const TopMenu = () => {
           <MenuIcon />
         </li>
         <li>
-          {userLocation ? userLocation : null}
+          {userLocation ? (
+            <>
+              <div className="locationDiv">
+                <LocationOnIcon style={{ color: "red" }} />
+                {userLocation}
+              </div>
+            </>
+          ) : null}
           {!userLocation && (
-            <button onClick={requestLocation}>Get Location</button>
+            <button id="locationButton" onClick={requestLocation}>
+              Get Location
+            </button>
           )}
         </li>
         <li>

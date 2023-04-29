@@ -63,6 +63,22 @@ a {
   list-style: none;
   padding: 0;
 }
+.locationDiv {
+  display: flex;
+  align-items: center;
+}
+#locationButton {
+  background-color: #212a3e;
+  color: white;
+
+  border-radius: 5px;
+  height: 100%;
+
+  border: none;
+}
+#locationButton:hover {
+  cursor: pointer;
+}
 .homePage {
   margin-top: 70px;
 }
