@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Food from "../components/Food";
+import TopMenu from "../components/TopMenu";
 
 const HomePage = () => {
   return (
     <>
+      <TopMenu />
       <div className="homePage">
         <div className="specialsDiv">
           <i>Get special discount</i>
