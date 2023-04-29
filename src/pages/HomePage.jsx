@@ -16,8 +16,10 @@ const HomePage = () => {
           <div className="query">
             <input type="search" placeholder="Search your food..." />
           </div>
-          <h3>Popular Food</h3>
-          <Link>View all</Link>
+          <div className="popularFoodDiv">
+            <h3>Popular Food</h3>
+            <Link>View all</Link>
+          </div>
         </div>
         <Food />
       </div>

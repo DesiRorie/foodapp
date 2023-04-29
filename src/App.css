@@ -109,6 +109,13 @@ a {
   margin-right: auto;
   border-radius: 10px;
 }
+.popularFoodDiv {
+  display: flex;
+  margin-top: 1%;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
 .popularFood a {
   text-decoration: none;
   color: #888;
@@ -116,15 +123,54 @@ a {
 
 .foodDiv {
   display: flex;
+  flex-direction: row;
+
   margin-top: 2rem;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .foodCard {
   display: flex;
+  border: 1px solid #212a3e;
+  color: white;
+  background-color: #212a3e;
 
   flex-direction: column;
+  margin-bottom: 1rem;
 
   width: 30%;
   border-radius: 5px;
-  align-items: start;
+  align-items: end;
+}
+.foodDiv > div {
+  flex-basis: calc(50% - 1rem);
+  /* margin-bottom: 1rem; */
+}
+.foodCard h4 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.foodCard b {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ratingDiv {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .specialsDiv {
+    width: 25%;
+    /* color: red; */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .foodDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foodCard {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
 }
