@@ -11,6 +11,11 @@ import gyoza from "./assets/gyoza.jpeg";
 import koreanBbq from "./assets/koreanBBQ.jpeg";
 
 function App() {
+  const sushiPrice = 8.0;
+  const udonPrice = 13.0;
+  const gyozaPrice = 5.0;
+  const koreanPrice = 15.0;
+
   return (
     <>
       {/* <TopMenu /> */}
@@ -22,8 +27,9 @@ function App() {
             element={
               <FoodPage
                 title="California Roll"
-                price="$8.00"
+                price={sushiPrice}
                 showImage={sushi}
+                aboutInfo="The California roll is a type of sushi roll that originated in the United States. It is typically made with sushi rice, seaweed (nori), crab meat or imitation crab, avocado, and cucumber. The roll is often topped with sesame seeds and served with soy sauce, pickled ginger, and wasabi."
               />
             }
           />
@@ -32,21 +38,23 @@ function App() {
             element={
               <FoodPage
                 showImage={noodles}
-                price="$13.00"
+                price={udonPrice}
                 title="Udon Noodles"
               />
             }
           />
           <Route
             path="/foodpage/gyoza"
-            element={<FoodPage showImage={gyoza} price="$5.00" title="Gyoza" />}
+            element={
+              <FoodPage showImage={gyoza} price={gyozaPrice} title="Gyoza" />
+            }
           />
           <Route
             path="/foodpage/korean-bbq-wings"
             element={
               <FoodPage
                 showImage={koreanBbq}
-                price="$15.00"
+                price={koreanPrice}
                 title="Korean BBQ Wings"
               />
             }

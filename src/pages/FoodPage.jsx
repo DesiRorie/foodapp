@@ -5,6 +5,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const FoodPage = (props) => {
   const [quantity, setQuantity] = useState(0);
+
   const increment = () => {
     setQuantity(quantity + 1);
   };
@@ -14,13 +15,18 @@ const FoodPage = (props) => {
       setQuantity(quantity - 1);
     }
   };
-  const { title, showImage, price } = props;
+  const goBack = () => {
+    window.history.back();
+  };
+  const { title, showImage, price, aboutInfo } = props;
+  // console.log(typeof price);
+
   return (
     <div className="selectedItem">
       <div className="foodpageNav">
         <ul>
           <li>
-            <ArrowBackIcon />
+            <ArrowBackIcon onClick={goBack} />
           </li>
           <li>Details</li>
           <li>
@@ -42,7 +48,7 @@ const FoodPage = (props) => {
         </div>
 
         <div className="priceDiv">
-          <h3>{price}</h3>
+          <h3>{"$" + price + ".00"}</h3>
           <div className="quantityButton">
             <button onClick={decrement}>-</button>
             <h2>{quantity}</h2>
@@ -51,14 +57,7 @@ const FoodPage = (props) => {
         </div>
         <div className="aboutItem">
           <h4>About {title}</h4>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-            itaque tempore distinctio quam ipsam ab libero aliquam enim, dolore
-            dicta placeat ea rem velit natus voluptas consectetur error
-            consequatur nemo dolorem delectus ut quae doloribus ex modi?
-            Repudiandae inventore sapiente explicabo provident consequatur amet
-            quibusdam quo atque, officiis, omnis harum.
-          </p>
+          <p>{aboutInfo}</p>
         </div>
       </div>
     </div>
