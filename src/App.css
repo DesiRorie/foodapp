@@ -101,6 +101,13 @@ a {
   border-radius: 5px;
   border: none;
 }
+.specialsDiv button:hover {
+  cursor: grab;
+}
+.specialsDiv button:active {
+  cursor: grabbing;
+  opacity: 80%;
+}
 .query {
   display: flex;
   flex-direction: column;

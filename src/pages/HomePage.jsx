@@ -18,7 +18,7 @@ const HomePage = () => {
           </div>
           <div className="popularFoodDiv">
             <h3>Popular Food</h3>
-            <Link>View all</Link>
+            <Link style={{ color: "black" }}>View all</Link>
           </div>
         </div>
         <Food />

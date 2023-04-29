@@ -6,12 +6,15 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const scrollHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <div className="navbarDiv">
         <ul className="navbarList">
           <li>
-            <Link to="/">
+            <Link to="/" onClick={scrollHome}>
               <HomeOutlinedIcon />
             </Link>
           </li>
