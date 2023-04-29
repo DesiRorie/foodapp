@@ -185,7 +185,7 @@ a {
   z-index: 0;
   transform: scale(1.1);
 }
-.foodCard h4 {
+.foodCard h3 {
   margin-left: auto;
   margin-right: auto;
 }
@@ -197,14 +197,108 @@ a {
   display: flex;
   align-items: center;
 }
-
 .selectedItem {
-  margin-top: 5em;
+  margin-top: 5%;
 }
+.foodpageNav ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.displayItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  text-align: center;
+}
+.displayItem img {
+  /* width: 50%; */
+
+  margin: auto;
+  border-radius: 5px;
+
+  border: 1px solid #212a3e;
+}
+.imageCard {
+  display: flex;
+  margin: auto;
+  transform: scale(1.2);
+
+  border-radius: 5px;
+  color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  width: min-content;
+  background-color: #212a3e;
+  margin-bottom: 5%;
+}
+.imageCard img {
+  width: 150px;
+  height: 100px;
+  /* display: none; */
+}
+.ingredientsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+.ingredientsDiv ul {
+  list-style: none;
+  padding: 0;
+}
+.priceDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantityButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  background-color: #fff;
+
+  /* height: 40px; */
+  /* width: 20%; */
+  padding: 0;
+  margin: 0;
+  margin-left: 25%;
+
+  border-radius: 5px;
+}
+.quantityButton button {
+  background-color: #fff;
+  height: 100%;
+  border: none;
+}
+.aboutItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* text-align: start; */
+}
+.aboutItem p {
+  width: 80%;
+  margin: auto;
+}
+
 @media only screen and (min-width: 600px) {
   .specialsDiv {
     width: 25%;
     /* color: red; */
+  }
+  .foodCard img {
+    width: 20em;
+    height: 15em;
+  }
+  .imageCard {
+    transform: scale(1.5);
   }
 }
 @media only screen and (max-width: 600px) {
