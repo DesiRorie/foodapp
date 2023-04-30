@@ -360,15 +360,23 @@ a {
   /* top: -1000px; */
   transition: 0.25s;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 734px) {
   .specialsDiv {
     width: 25%;
     /* color: red; */
   }
   .foodCard img {
-    width: 20em;
-    height: 15em;
+    width: 15em;
   }
+  /* .foodCard img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    width: 10em;
+    height: 10em;
+    z-index: 0;
+    transform: scale(1.1);
+  } */
   .imageCard {
     transform: scale(1.5);
   }
