@@ -18,6 +18,7 @@ a {
 
   padding: 10px;
   padding-top: 0%;
+  z-index: 20000;
 }
 .navbarDiv ul {
   list-style: none;
@@ -58,7 +59,10 @@ a {
 .menuList li:last-child {
   margin-right: 0;
 }
-
+#menuIcon:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
 .menuList {
   display: flex;
   justify-content: space-evenly;
@@ -312,7 +316,7 @@ a {
   justify-content: center;
   /* width: 3em; */
   bottom: 0vh;
-  background: #212a3e;
+  background: white;
   color: black;
   padding: 20px;
   /* bottom: 0; */
@@ -324,17 +328,22 @@ a {
 }
 .sidebar button {
   position: absolute;
+  width: 100%;
   top: 2px;
   right: 2px;
-  background-color: white;
-  color: #212a3e;
+  background-color: #212a3e;
+  color: white;
   border-radius: 2px;
   border: none;
+}
+.sidebar button:hover {
+  cursor: pointer;
 }
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 0.5em;
 }
 
 .sidebar li {
@@ -342,14 +351,14 @@ a {
 }
 
 .sidebar a {
-  color: #fff;
+  color: #212a3e;
   text-decoration: none;
 }
 .dontShow {
   position: relative;
   left: -1000px;
-  top: -1000px;
-  transition: 1s;
+  /* top: -1000px; */
+  transition: 0.25s;
 }
 @media only screen and (min-width: 600px) {
   .specialsDiv {

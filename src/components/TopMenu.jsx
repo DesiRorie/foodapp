@@ -47,7 +47,7 @@ const TopMenu = () => {
       <div className="topMenu">
         <ul className="menuList">
           <li>
-            <MenuIcon onClick={toggleSidebar} />
+            <MenuIcon id="menuIcon" onClick={toggleSidebar} />
           </li>
           <li>
             {userLocation ? (
