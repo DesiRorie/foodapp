@@ -275,6 +275,7 @@ a {
   align-items: center;
   height: 2rem;
   background-color: #fff;
+
   width: 5rem;
   /* height: 40px; */
   /* width: 20%; */
@@ -292,6 +293,7 @@ a {
   border: none;
   width: 33%;
   font-size: large;
+  padding: 0px;
 }
 .aboutItem {
   display: flex;
