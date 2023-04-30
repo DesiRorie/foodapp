@@ -1,40 +1,17 @@
-// import React from "react";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-
-// const TopMenu = () => {
-//   const successCallback = (position) => {
-//     console.log(position);
-//   };
-
-//   const errorCallback = (error) => {
-//     console.log(error);
-//   };
-
-//   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-//   return (
-//     <div className="topMenu">
-//       <ul className="menuList">
-//         <li>
-//           <MenuIcon />
-//         </li>
-//         <li>Your Location</li>
-//         <li>
-//           <NotificationsOutlinedIcon />
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default TopMenu;
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-
+import Sidebar from "./Sidebar";
+import { useEffect } from "react";
+import { useRef } from "react";
 const TopMenu = () => {
   const [userLocation, setUserLocation] = useState(null);
+  const [showSideBar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSideBar);
+  };
 
   const requestLocation = () => {
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -62,33 +39,41 @@ const TopMenu = () => {
       console.log(error);
     }
   };
-
+  const byeSidebar = () => {
+    setShowSidebar(false);
+  };
   return (
-    <div className="topMenu">
-      <ul className="menuList">
-        <li>
-          <MenuIcon />
-        </li>
-        <li>
-          {userLocation ? (
-            <>
-              <div className="locationDiv">
-                <LocationOnIcon style={{ color: "red" }} />
-                {userLocation}
-              </div>
-            </>
-          ) : null}
-          {!userLocation && (
-            <button id="locationButton" onClick={requestLocation}>
-              Get Location
-            </button>
-          )}
-        </li>
-        <li>
-          <NotificationsOutlinedIcon />
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className="topMenu">
+        <ul className="menuList">
+          <li>
+            <MenuIcon onClick={toggleSidebar} />
+          </li>
+          <li>
+            {userLocation ? (
+              <>
+                <div className="locationDiv">
+                  <LocationOnIcon style={{ color: "red" }} />
+                  {userLocation}
+                </div>
+              </>
+            ) : null}
+            {!userLocation && (
+              <button id="locationButton" onClick={requestLocation}>
+                Get Location
+              </button>
+            )}
+          </li>
+          <li>
+            <NotificationsOutlinedIcon />
+          </li>
+        </ul>
+      </div>
+      <Sidebar
+        byeSidebar={byeSidebar}
+        renderBar={showSideBar ? "sidebar" : "dontShow"}
+      />
+    </>
   );
 };
 
