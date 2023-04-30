@@ -21,6 +21,8 @@ function App() {
       {/* <TopMenu /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/*" element={<HomePage />} />
+
         <Route path="/foodpage">
           <Route
             path="/foodpage/california-roll"
