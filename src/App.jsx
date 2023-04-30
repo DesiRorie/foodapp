@@ -40,13 +40,19 @@ function App() {
                 showImage={noodles}
                 price={udonPrice}
                 title="Udon Noodles"
+                aboutInfo="Udon noodles are a type of thick, wheat-based noodle that originated in Japan. They are a staple in Japanese cuisine and are known for their chewy texture and versatility in various dishes."
               />
             }
           />
           <Route
             path="/foodpage/gyoza"
             element={
-              <FoodPage showImage={gyoza} price={gyozaPrice} title="Gyoza" />
+              <FoodPage
+                showImage={gyoza}
+                price={gyozaPrice}
+                title="Gyoza"
+                aboutInfo="Gyoza typically consists of a thin wheat dough wrapper filled with a mixture of ground meat (commonly pork) and finely chopped vegetables. "
+              />
             }
           />
           <Route
@@ -56,6 +62,7 @@ function App() {
                 showImage={koreanBbq}
                 price={koreanPrice}
                 title="Korean BBQ Wings"
+                aboutInfo="Korean BBQ wings are chicken wings that are marinated and grilled or roasted with a delicious Korean-style barbecue sauce. "
               />
             }
           />
