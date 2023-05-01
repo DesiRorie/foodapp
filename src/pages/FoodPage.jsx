@@ -14,12 +14,22 @@ const FoodPage = (props) => {
     console.log(cartItems);
     // console.log(totalPrice);
   }, [cartItems]);
+
+  const CartButton = () => {
+    const totalPrice = quantity * price;
+    addToCart({
+      title: title,
+      price: price,
+      quantity: quantity,
+      totalPrice: totalPrice,
+    });
+  };
   const increment = () => {
     setQuantity(quantity + 1);
-    addToCart({
-      title: `${title}`,
-      price: `${price}`,
-    });
+    // addToCart({
+    //   title: `${title}`,
+    //   price: `${price}`,
+    // });
   };
   const decrement = () => {
     if (quantity === 0) return;
@@ -65,6 +75,7 @@ const FoodPage = (props) => {
             <h2>{quantity}</h2>
             <button onClick={increment}>+</button>
           </div>
+          <button onClick={CartButton}>Add to cart</button>
         </div>
         <div className="aboutItem">
           <h4>About {title}</h4>

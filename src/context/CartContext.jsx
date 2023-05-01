@@ -6,13 +6,16 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (food) => {
-    setCartItems([...cartItems, food]);
+    const { title, price, quantity } = food;
+    const totalPrice = parseFloat(price) * quantity;
+    const updatedFood = { ...food, totalPrice };
+    setCartItems([...cartItems, updatedFood]);
   };
 
   const calculateTotalPrice = () => {
     let totalPrice = 0;
     cartItems.forEach((item) => {
-      totalPrice += parseFloat(item.price);
+      totalPrice += parseFloat(item.totalPrice);
     });
     console.log(totalPrice);
     return totalPrice;
