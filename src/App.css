@@ -23,6 +23,9 @@ a {
 .navbarDiv ul {
   list-style: none;
 }
+.modalButton {
+  background-color: #fff;
+}
 .navbarList li {
   margin-right: 10px;
 }
@@ -96,7 +99,7 @@ a {
   background-color: #212a3e;
   padding: 10px;
   width: 80%;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -159,6 +162,7 @@ a {
   margin-top: 2rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 10%;
 }
 .foodDiv a {
   margin-left: auto;
@@ -358,9 +362,17 @@ a {
 }
 .dontShow {
   position: relative;
-  left: -1000px;
+  left: -2000px;
+
   /* top: -1000px; */
   transition: 0.25s;
+}
+#addToCartStyle:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+#addToCartStyle:active {
+  transform: scale(1.1);
 }
 @media only screen and (min-width: 734px) {
   .specialsDiv {

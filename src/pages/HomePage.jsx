@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Food from "../components/Food";
 import TopMenu from "../components/TopMenu";
+import BasicModal from "../components/Modal";
 
 const HomePage = () => {
   return (
@@ -11,7 +12,8 @@ const HomePage = () => {
         <div className="specialsDiv">
           <i>Get special discount</i>
           <h3>up to 85%</h3>
-          <button>Claim Reward</button>
+
+          <BasicModal />
         </div>
 
         <div className="popularFood">

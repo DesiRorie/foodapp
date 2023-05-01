@@ -4,10 +4,27 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Sidebar from "./Sidebar";
 import { useEffect } from "react";
-import { useRef } from "react";
+
 const TopMenu = () => {
   const [userLocation, setUserLocation] = useState(null);
   const [showSideBar, setShowSidebar] = useState(false);
+  const [openBiz, setOpenBiz] = useState(true);
+
+  const date = new Date();
+  const time = date.getHours();
+  const day = date.getDay();
+
+  useEffect(() => {
+    if (time > 22) {
+      setOpenBiz(false);
+    } else if (time < 9) {
+      setOpenBiz(false);
+    } else if (day === 0) {
+      setOpenBiz(false);
+    } else {
+      setOpenBiz(true);
+    }
+  }, []);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSideBar);
@@ -67,6 +84,7 @@ const TopMenu = () => {
           <li>
             <NotificationsOutlinedIcon />
           </li>
+          <li>{openBiz ? "We are Open" : "Sorry We Are Closed"}</li>
         </ul>
       </div>
       <Sidebar
