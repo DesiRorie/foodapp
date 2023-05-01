@@ -2,12 +2,24 @@ import React, { useState } from "react";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useContext, useEffect } from "react";
+import { CartContext } from "../context/CartContext";
 
 const FoodPage = (props) => {
   const [quantity, setQuantity] = useState(0);
-
+  const { cartItems, addToCart, calculateTotalPrice, setCartItems } =
+    useContext(CartContext);
+  useEffect(() => {
+    calculateTotalPrice();
+    console.log(cartItems);
+    // console.log(totalPrice);
+  }, [cartItems]);
   const increment = () => {
     setQuantity(quantity + 1);
+    addToCart({
+      title: `${title}`,
+      price: `${price}`,
+    });
   };
   const decrement = () => {
     if (quantity === 0) return;
@@ -46,7 +58,6 @@ const FoodPage = (props) => {
           </ul>
         </div> */}
         </div>
-
         <div className="priceDiv">
           <h3>{"$" + price + ".00"}</h3>
           <div className="quantityButton">
@@ -58,6 +69,17 @@ const FoodPage = (props) => {
         <div className="aboutItem">
           <h4>About {title}</h4>
           <p>{aboutInfo}</p>
+        </div>
+      </div>
+      <div className="cartTotal">
+        <div className="cartTotal1">
+          <h2>
+            {cartItems ? `$ ${calculateTotalPrice()}` : "No items in cart"}
+          </h2>
+          <span>Total Price</span>
+        </div>
+        <div className="cartTotal2">
+          <button>Place Order</button>
         </div>
       </div>
     </div>

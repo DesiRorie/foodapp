@@ -374,6 +374,34 @@ a {
 #addToCartStyle:active {
   transform: scale(1.1);
 }
+.cartTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  justify-content: space-evenly;
+  /* background-color: #212a3e; */
+}
+.cartTotal1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cartTotal2 button {
+  border: none;
+  background-color: black;
+  border-radius: 20px;
+  width: 10em;
+  height: 3em;
+  color: white;
+}
+
+.cartTotal2 button:hover {
+  transition: 0.5s;
+  opacity: 90%;
+  cursor: pointer;
+}
 @media only screen and (min-width: 734px) {
   .specialsDiv {
     width: 25%;

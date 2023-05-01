@@ -7,15 +7,30 @@ import noodles from "../assets/udonNoodles.jpeg";
 import gyoza from "../assets/gyoza.jpeg";
 import koreanBbq from "../assets/koreanBBQ.jpeg";
 import { useState } from "react";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 const Food = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, addToCart, calculateTotalPrice, setCartItems } =
+    useContext(CartContext);
 
-  const addToCart = (food) => {
-    setCartItems([...cartItems, food]);
-  };
+  // const [cartItems, setCartItems] = useState([]);
+
+  // const addToCart = (food) => {
+  //   setCartItems([...cartItems, food]);
+  // };
+
+  // const calculateTotalPrice = () => {
+  //   let totalPrice = 0;
+  //   cartItems.forEach((item) => {
+  //     totalPrice += item.price;
+  //   });
+  //   return totalPrice;
+  // };
+
   useEffect(() => {
     console.log(cartItems);
+    // console.log(totalPrice);
   }, [cartItems]);
 
   return (
