@@ -379,14 +379,20 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 5%;
-  margin-bottom: 10%;
+
   justify-content: space-evenly;
+  margin-bottom: 20%;
+
   /* background-color: #212a3e; */
 }
 .cartTotal1 {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 10%;
+}
+.cartTotal2 {
+  margin-bottom: 10%;
 }
 
 .cartTotal2 button {
@@ -395,6 +401,7 @@ a {
   border-radius: 20px;
   width: 10em;
   height: 3em;
+
   color: white;
 }
 
