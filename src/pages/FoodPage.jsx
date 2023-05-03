@@ -75,7 +75,9 @@ const FoodPage = (props) => {
             <h2>{quantity}</h2>
             <button onClick={increment}>+</button>
           </div>
-          <button onClick={CartButton}>Add to cart</button>
+          <button id="addToCart" onClick={CartButton}>
+            Add to cart
+          </button>
         </div>
         <div className="aboutItem">
           <h4>About {title}</h4>

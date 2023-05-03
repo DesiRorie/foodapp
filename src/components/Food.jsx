@@ -11,7 +11,7 @@ import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 
 const Food = () => {
-  const { cartItems, addToCart, calculateTotalPrice, setCartItems } =
+  const { cartItems, addToCart, calculateTotalPrice, setCartItems, quantity } =
     useContext(CartContext);
 
   // const [cartItems, setCartItems] = useState([]);
@@ -51,6 +51,7 @@ const Food = () => {
             addToCart({
               title: "California Roll",
               price: 8.0,
+              quantity: 1,
             })
           }
         />
@@ -71,6 +72,7 @@ const Food = () => {
           onClick={() =>
             addToCart({
               title: "Udon Noodles",
+              quantity: 1,
               price: 13.0,
             })
           }
@@ -90,6 +92,7 @@ const Food = () => {
           onClick={() =>
             addToCart({
               title: "Gyoza",
+              quantity: 1,
               price: 5.0,
             })
           }
@@ -109,6 +112,7 @@ const Food = () => {
           onClick={() =>
             addToCart({
               title: "Korean BBQ Wings",
+              quantity: 1,
               price: 15.0,
             })
           }

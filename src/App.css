@@ -410,6 +410,16 @@ a {
   opacity: 90%;
   cursor: pointer;
 }
+#addToCart {
+  border: none;
+  background-color: black;
+  border-radius: 20px;
+  width: 10em;
+  height: 3em;
+  margin-left: 1em;
+
+  color: white;
+}
 @media only screen and (min-width: 734px) {
   .specialsDiv {
     width: 25%;
