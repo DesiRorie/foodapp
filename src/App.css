@@ -10,6 +10,7 @@ a {
 button:hover {
   cursor: pointer;
 }
+
 .navbarDiv {
   position: fixed;
   left: 50%;
